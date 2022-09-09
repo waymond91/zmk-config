@@ -29,7 +29,7 @@
     Raise_layer {
       bindings = <
         &kp TAB &kp EXCLAMATION &kp AT_SIGN &kp HASH &kp DOLLAR &kp PERCENT &kp CARET &kp AMPERSAND &kp ASTERISK &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp BACKSPACE 
-        &kp LEFT_CONTROL &trans &trans &trans &kp undefined &trans &kp K_CUT &kp K_COPY &kp K_PASTE &kp K_UNDO &kp K_AGAIN &kp GRAVE 
+        &kp LEFT_CONTROL &trans &trans &trans &trans &trans &kp K_CUT &kp K_COPY &kp K_PASTE &kp K_UNDO &kp K_AGAIN &kp GRAVE 
         &kp LEFT_SHIFT &trans &trans &trans &trans &trans &kp UNDERSCORE &kp PLUS &kp LEFT_BRACE &kp RIGHT_BRACE &kp PIPE &kp TILDE 
         &kp LEFT_GUI &trans &kp SPACE &kp RETURN &trans &kp RIGHT_ALT 
       >;
