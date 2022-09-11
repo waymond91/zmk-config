@@ -21,9 +21,9 @@
 
         Lower_layer {
             bindings = <
-          &kp TAB       &kp NUMBER_1    &kp NUMBER_2      &kp NUMBER_3          &kp NUMBER_4           &kp NUMBER_5      &kp NUMBER_6       &kp NUMBER_7      &kp NUMBER_8  &kp NUMBER_9   &kp NUMBER_0    &none
- &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE   &kp RIGHT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS          &kp EXCL         &kp PERIOD         &kp COMMA  &kp QUESTION  &kp BACKSPACE    &none
-        &kp TILDE          &kp EQUAL   &kp LESS_THAN  &kp GREATER_THAN              &kp PIPE          &kp AMPERSAND  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES    &kp UNDERSCORE        &kp AT     &kp ESCAPE  &kp ESC
+          &kp TAB       &kp NUMBER_1    &kp NUMBER_2      &kp NUMBER_3          &kp NUMBER_4           &kp NUMBER_5      &kp NUMBER_6       &kp NUMBER_7      &kp NUMBER_8  &kp NUMBER_9   &kp NUMBER_0   &none
+ &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE   &kp RIGHT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS          &kp EXCL         &kp PERIOD         &kp COMMA  &kp QUESTION      &kp COLON   &none
+        &kp TILDE          &kp EQUAL   &kp LESS_THAN  &kp GREATER_THAN              &kp PIPE          &kp AMPERSAND  &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES    &kp UNDERSCORE        &kp AT  &kp SEMICOLON   &none
                                                                  &to 3             &kp SPACE                  &none             &none          &kp ENTER  &kp LEFT_COMMAND
             >;
         };
