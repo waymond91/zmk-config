@@ -38,8 +38,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_GUI &kp X>,
-                <&macro_release>;
+                <&kp LEFT_GUI>,
+                <&macro_tap>,
+                <&kp X>,
+                <&macro_release>,
+                <&kp LEFT_GUI>;
         };
         macro_all: macro_all {
             compatible = "zmk,behavior-macro";
@@ -47,8 +50,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_GUI &kp A>,
-                <&macro_release>;
+                <&kp LEFT_GUI>,
+                <&macro_tap>,
+                <&kp A>,
+                <&macro_release>,
+                <&kp LEFT_GUI>;
         };
     };
 
@@ -57,9 +63,9 @@
 
         Base_layer {
             bindings = <
-          &kp TAB   &kp Q   &kp W   &kp E      &kp R         &kp T      &kp Y   &kp U   &kp I   &kp O          &kp P  &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS
- &kp LEFT_CONTROL   &kp A   &kp S   &kp D      &kp F         &kp G      &kp H   &kp J   &kp K   &kp L  &kp BACKSPACE                  &kp K_APPLICATION
-   &kp LEFT_SHIFT   &kp Z   &kp X   &kp C      &kp V         &kp B      &kp N   &kp M   &none   &none        &kp ESC                            &kp ESC
+          &kp TAB   &kp Q   &kp W   &kp E      &kp R         &kp T      &kp Y   &kp U   &kp I   &kp O          &kp P    &none
+ &kp LEFT_CONTROL   &kp A   &kp S   &kp D      &kp F         &kp G      &kp H   &kp J   &kp K   &kp L  &kp BACKSPACE    &none
+   &kp LEFT_SHIFT   &kp Z   &kp X   &kp C      &kp V         &kp B      &kp N   &kp M   &none   &none        &kp ESC  &kp ESC
                                     &mo 3  &kp SPACE  &kp LEFT_GUI  &kp ENTER   &mo 1   &mo 2
             >;
         };
@@ -84,10 +90,10 @@
 
         Numbers_layer {
             bindings = <
-          &kp TAB        &none         &none   &none   &none             &none      &none           &none    &kp UP_ARROW            &none          &none   &none
- &kp LEFT_CONTROL  &macro_copy  &macro_paste   &none   &none             &none      &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE   &none
-   &kp LEFT_SHIFT        &none         &none   &none   &none             &none      &none        &kp HOME           &none          &kp END        &kp ESC   &none
-                                               &none   &none  &kp LEFT_COMMAND  &kp ENTER           &none           &none
+          &kp TAB       &none       &none        &none         &none             &none      &none           &none    &kp UP_ARROW            &none          &none   &none
+ &kp LEFT_CONTROL  &macro_all  &macro_cut  &macro_copy  &macro_paste             &none      &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE   &none
+   &kp LEFT_SHIFT       &none       &none        &none         &none             &none      &none        &kp HOME           &none          &kp END        &kp ESC   &none
+                                                 &none         &none  &kp LEFT_COMMAND  &kp ENTER           &none           &none
             >;
         };
     };
