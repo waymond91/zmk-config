@@ -8,13 +8,23 @@
 
 / {
     macros {
-        copy: copy {
+        macro_copy: macro_copy {
             compatible = "zmk,behavior-macro";
-            label = "copy";
+            label = "macro_copy";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_GUI &kp C>;
+                <&kp LEFT_GUI &kp C>,
+                <&macro_release>;
+        };
+        macro_paste: macro_paste {
+            compatible = "zmk,behavior-macro";
+            label = "new_macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI &kp V>,
+                <&macro_release>;
         };
     };
 
@@ -32,10 +42,10 @@
 
         Lower_layer {
             bindings = <
-          &kp TAB  &kp LEFT_BRACKET  &kp RIGHT_BRACKET         &kp LESS_THAN       &kp GREATER_THAN      &kp PLUS  &kp MINUS      &kp SEMICOLON         &kp COLON         &none          &none   &none
- &kp LEFT_CONTROL    &kp LEFT_BRACE    &kp RIGHT_BRACE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS     &kp EQUAL   &kp EXCL         &kp PERIOD         &kp COMMA  &kp QUESTION  &kp BACKSPACE   &none
-   &kp LEFT_SHIFT     &kp AMPERSAND           &kp PIPE        &kp UNDERSCORE       &kp SINGLE_QUOTE  &kp ASTERISK  &kp SLASH  &kp DOUBLE_QUOTES            &kp AT      &kp HASH        &kp ESC   &none
-                                                                       &to 3              &kp SPACE         &none  &kp ENTER              &none  &kp LEFT_COMMAND
+          &kp TAB      &kp RIGHT_BRACKET  &kp GREATER_THAN   &kp LESS_THAN      &kp LEFT_BRACKET      &kp PLUS  &kp MINUS      &kp SEMICOLON         &kp COLON         &none          &none   &none
+ &kp LEFT_CONTROL  &kp RIGHT_PARENTHESIS   &kp RIGHT_BRACE  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS     &kp EQUAL   &kp EXCL         &kp PERIOD         &kp COMMA  &kp QUESTION  &kp BACKSPACE   &none
+   &kp LEFT_SHIFT          &kp AMPERSAND          &kp PIPE  &kp UNDERSCORE      &kp SINGLE_QUOTE  &kp ASTERISK  &kp SLASH  &kp DOUBLE_QUOTES            &kp AT      &kp HASH        &kp ESC   &none
+                                                                     &to 3             &kp SPACE         &none  &kp ENTER              &none  &kp LEFT_COMMAND
             >;
         };
 
@@ -50,10 +60,10 @@
 
         Numbers_layer {
             bindings = <
-          &kp TAB           &none    &kp UP_ARROW            &none   &none             &none      &none           &none    &kp UP_ARROW            &none          &none   &none
- &kp LEFT_CONTROL  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW   &none             &none      &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE   &none
-   &kp LEFT_SHIFT           &none           &copy        &kp ENTER   &none             &none      &none        &kp HOME           &none          &kp END        &kp ESC   &none
-                                                             &none   &none  &kp LEFT_COMMAND  &kp ENTER           &none           &none
+          &kp TAB        &none         &none   &none   &none             &none      &none           &none    &kp UP_ARROW            &none          &none   &none
+ &kp LEFT_CONTROL  &macro_copy  &macro_paste   &none   &none             &none      &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE   &none
+   &kp LEFT_SHIFT        &none         &none   &none   &none             &none      &none        &kp HOME           &none          &kp END        &kp ESC   &none
+                                               &none   &none  &kp LEFT_COMMAND  &kp ENTER           &none           &none
             >;
         };
     };
