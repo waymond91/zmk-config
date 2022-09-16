@@ -98,6 +98,36 @@
                 <&macro_press>,
                 <&kp LEFT_GUI &kp LEFT_SHIFT>;
         };
+        macro_left: macro_left {
+            compatible = "zmk,behavior-macro";
+            label = "macro_left";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_press>,
+                <&kp LEFT_ARROW>,
+                <&macro_press>,
+                <&kp LEFT_SHIFT>;
+        };
+        macro_right: macro_right {
+            compatible = "zmk,behavior-macro";
+            label = "macro_right";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT>,
+                <&macro_press>,
+                <&kp RIGHT_ARROW>,
+                <&macro_press>,
+                <&kp LEFT_SHIFT>;
+        };
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            label = "new_macro";
+            #binding-cells = <0>;
+            bindings = <>;
+        };
     };
 
     keymap {
@@ -132,7 +162,7 @@
 
         Numbers_layer {
             bindings = <
-          &kp TAB       &none  &macro_redo  &macro_undo  &macro_shake             &none      &none           &none    &kp UP_ARROW            &none          &none   &none
+          &kp TAB       &none  &macro_redo  &macro_undo  &macro_shake             &none      &none     &macro_left    &kp UP_ARROW     &macro_right          &none   &none
  &kp LEFT_CONTROL  &macro_all   &macro_cut  &macro_copy  &macro_paste             &none      &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE   &none
    &kp LEFT_SHIFT       &none        &none        &none         &none             &none      &none        &kp HOME           &none          &kp END        &kp ESC   &none
                                                   &none         &none  &kp LEFT_COMMAND  &kp ENTER           &none           &none
