@@ -1,5 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
 
 #define BASE 0
 #define LOWER 1
@@ -122,12 +123,6 @@
                 <&macro_press>,
                 <&kp LEFT_SHIFT>;
         };
-        new_macro: new_macro {
-            compatible = "zmk,behavior-macro";
-            label = "new_macro";
-            #binding-cells = <0>;
-            bindings = <>;
-        };
     };
 
     keymap {
@@ -162,10 +157,10 @@
 
         Numbers_layer {
             bindings = <
-          &kp TAB       &none  &macro_redo  &macro_undo  &macro_shake             &none      &none     &macro_left    &kp UP_ARROW     &macro_right          &none   &none
- &kp LEFT_CONTROL  &macro_all   &macro_cut  &macro_copy  &macro_paste             &none      &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE   &none
-   &kp LEFT_SHIFT       &none        &none        &none         &none             &none      &none        &kp HOME           &none          &kp END        &kp ESC   &none
-                                                  &none         &none  &kp LEFT_COMMAND  &kp ENTER           &none           &none
+          &kp TAB       &none  &macro_redo  &macro_undo  &macro_shake             &none  &bt BT_CLR    &bt BT_SEL 0    &kp UP_ARROW     &bt BT_SEL 1          &none   &none
+ &kp LEFT_CONTROL  &macro_all   &macro_cut  &macro_copy  &macro_paste             &none       &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE   &none
+   &kp LEFT_SHIFT       &none        &none        &none         &none             &none       &none        &kp HOME           &none          &kp END        &kp ESC   &none
+                                                  &none         &none  &kp LEFT_COMMAND   &kp ENTER           &none           &none
             >;
         };
     };
