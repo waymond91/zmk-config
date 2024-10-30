@@ -134,16 +134,26 @@
 
         macro_home: macro_home {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&mt LEFT_COMMAND LEFT_ARROW>;
             label = "MACRO_HOME";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,    // Begin macro press
+                <&kp LEFT_COMMAND>, // Press Cmd
+                <&kp LEFT>,        // Press Left Arrow
+                <&macro_release>,  // Release Left Arrow
+                <&kp LEFT_COMMAND>; // Release Cmd
         };
 
         macro_end: macro_end {
             compatible = "zmk,behavior-macro";
+            label = "MACRO_HOME";
             #binding-cells = <0>;
-            bindings = <&mt LEFT_COMMAND RIGHT>;
-            label = "MACRO_END";
+            bindings =
+                <&macro_press>,    // Begin macro press
+                <&kp LEFT_COMMAND>, // Press Cmd
+                <&kp RIGHT>,        // Press Left Arrow
+                <&macro_release>,  // Release Left Arrow
+                <&kp LEFT_COMMAND>; // Release Cmd
         };
     };
 
