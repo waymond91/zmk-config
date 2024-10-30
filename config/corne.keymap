@@ -131,6 +131,20 @@
                 <&macro_press>,
                 <&kp LEFT_SHIFT>;
         };
+
+        macro_home: macro_home {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mt LEFT_COMMAND LEFT_ARROW>;
+            label = "MACRO_HOME";
+        };
+
+        macro_end: macro_end {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&mt LEFT_COMMAND RIGHT>;
+            label = "MACRO_END";
+        };
     };
 
     keymap {
@@ -158,17 +172,17 @@
             bindings = <
 &kp TAB           &kp EXCLAMATION  &kp AT_SIGN   &kp HASH      &kp DOLLAR    &kp PERCENT   &kp CARET     &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none
 &kp LEFT_CONTROL  &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8      &kp NUMBER_9          &kp NUMBER_0           &none
-&kp LEFT_SHIFT    &none            &none         &none         &none         &none         &kp HOME      &kp END        &none             &none                 &kp ESCAPE             &kp ESC
+&kp LEFT_SHIFT    &none            &none         &none         &none         &none         &kp HOME      &kp END        &none             &none                 &none                  &kp ESC
                                                  &to 3         &kp SPACE     &none         &kp ENTER     &none          &kp LEFT_COMMAND
             >;
         };
 
         Numbers_layer {
             bindings = <
-&none  &macro_left  &none       &none        &macro_right  &kp ESC           &bt BT_CLR  &bt BT_SEL 0    &kp UP_ARROW    &bt BT_SEL 1     &none          &none
-&none  &macro_all   &macro_cut  &macro_copy  &macro_paste  &none             &none       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE  &to 0
-&none  &none        &none       &none        &none         &none             &none       &kp HOME        &none           &kp END          &kp ESC        &none
-                                &none        &none         &kp LEFT_COMMAND  &kp ENTER   &none           &none
+&none  &none       &none       &none        &none         &none             &bt BT_CLR  &bt BT_SEL 0    &kp UP_ARROW    &bt BT_SEL 1     &none          &none
+&none  &macro_all  &macro_cut  &macro_copy  &macro_paste  &none             &none       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE  &to 0
+&none  &none       &none       &none        &none         &none             &none       &macro_home     &none           &macro_end       &kp ESC        &none
+                               &none        &none         &kp LEFT_COMMAND  &kp ENTER   &none           &none
             >;
         };
     };
