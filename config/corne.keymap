@@ -161,7 +161,7 @@
 
         Lower_layer {
             bindings = <
-&kp TAB           &kp RIGHT_BRACKET      &kp GREATER_THAN  &kp LESS_THAN   &kp LEFT_BRACKET      &kp PLUS      &kp MINUS  &kp SEMICOLON      &kp COLON         &none         &none          &none
+&kp TAB           &kp RIGHT_BRACKET      &kp GREATER_THAN  &kp LESS_THAN   &kp LEFT_BRACKET      &kp PLUS      &kp MINUS  &kp SEMICOLON      &kp COLON         &kp GRAVE     &kp DOLLAR     &none
 &kp LEFT_CONTROL  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE   &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp EQUAL     &kp EXCL   &kp PERIOD         &kp COMMA         &kp QUESTION  &kp BACKSPACE  &none
 &kp LEFT_SHIFT    &kp AMPERSAND          &kp PIPE          &kp UNDERSCORE  &kp SINGLE_QUOTE      &kp ASTERISK  &kp SLASH  &kp DOUBLE_QUOTES  &kp AT            &kp HASH      &kp ESC        &none
                                                            &to 3           &kp SPACE             &none         &kp ENTER  &none              &kp LEFT_COMMAND
