@@ -137,11 +137,11 @@
             label = "MACRO_HOME";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,    // Begin macro press
-                <&kp LEFT_COMMAND>, // Press Cmd
-                <&kp LEFT>,        // Press Left Arrow
-                <&macro_release>,  // Release Left Arrow
-                <&kp LEFT_COMMAND>; // Release Cmd
+                <&macro_press>,
+                <&kp LEFT_COMMAND &kp LEFT>,
+                <&macro_release>,
+                <&kp LEFT_COMMAND>;
+ // Release Cmd
         };
 
         macro_end: macro_end {
@@ -149,11 +149,11 @@
             label = "MACRO_HOME";
             #binding-cells = <0>;
             bindings =
-                <&macro_press>,    // Begin macro press
-                <&kp LEFT_COMMAND>, // Press Cmd
-                <&kp RIGHT>,        // Press Left Arrow
-                <&macro_release>,  // Release Left Arrow
-                <&kp LEFT_COMMAND>; // Release Cmd
+                <&macro_press>,
+                <&kp LEFT_COMMAND &kp RIGHT>,
+                <&macro_release>,
+                <&kp LEFT_COMMAND>;
+ // Release Cmd
         };
     };
 
@@ -189,10 +189,10 @@
 
         Numbers_layer {
             bindings = <
-&none  &none       &none       &none        &none         &none             &bt BT_CLR  &bt BT_SEL 0    &kp UP_ARROW    &bt BT_SEL 1     &none          &none
-&none  &macro_all  &macro_cut  &macro_copy  &macro_paste  &none             &none       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE  &to 0
-&none  &none       &none       &none        &none         &none             &none       &macro_home     &none           &macro_end       &kp ESC        &none
-                               &none        &none         &kp LEFT_COMMAND  &kp ENTER   &none           &none
+&none         &none       &none       &none        &none         &none             &bt BT_CLR  &bt BT_SEL 0    &kp UP_ARROW    &bt BT_SEL 1     &none          &none
+&kp LEFT_ALT  &macro_all  &macro_cut  &macro_copy  &macro_paste  &none             &none       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE  &to 0
+&none         &none       &none       &none        &none         &none             &none       &macro_home     &none           &macro_end       &kp ESC        &none
+                                      &none        &none         &kp LEFT_COMMAND  &kp ENTER   &none           &none
             >;
         };
     };
